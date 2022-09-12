@@ -16,6 +16,11 @@
       padding-right: 40px;
     }
 
+    @media screen and (max-width: 739px) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
     .stats-main {
       width: 66.66%;
 

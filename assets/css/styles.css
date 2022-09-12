@@ -435,6 +435,13 @@ hr {
   }
 }
 
+@media screen and (max-width: 739px) {
+  .performance .stats {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 .performance .stats .stats-main {
   width: 66.66%;
 }
