@@ -412,6 +412,7 @@ button {
   width: 100%;
   border: 1px solid #ebebeb;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 hr {

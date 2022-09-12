@@ -21,11 +21,13 @@ const data = {
       label: "Paid out",
       data: [500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       backgroundColor: "#000",
+      // yAxisID: "left-y-axis",
     },
     {
       label: "Expected",
       data: [1100, 1480, 350, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       backgroundColor: "#b0b0b0",
+      // yAxisID: "right-y-axis",
     },
   ],
 };
@@ -51,8 +53,10 @@ const config = {
         },
       },
       y: {
+        position: "right",
         stacked: true,
         ticks: {
+          fontStyle: "bold",
           display: true,
           stepSize: 500,
           // Include a dollar sign in the ticks
@@ -61,6 +65,13 @@ const config = {
           },
         },
         title: { display: true, text: "Earnings" },
+        afterBuildTicks: function (scale) {
+          const newTicks = [...scale.ticks];
+          newTicks.splice(scale.ticks.length - 1, 1);
+          scale.ticks = newTicks;
+          // scale.ticks = updateChartTicks(scale);
+          return;
+        },
       },
     },
   },
