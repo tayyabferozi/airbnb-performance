@@ -385,3 +385,43 @@ hr {
   border-top: 1px solid $color5;
   opacity: 0.5;
 }
+
+.fc-header-toolbar.fc-toolbar.fc-toolbar-ltr {
+  // justify-content: center;
+}
+
+.fc .fc-day-other .fc-daygrid-day-top {
+  opacity: 0 !important;
+}
+
+.fc-daygrid-day-top {
+  flex-direction: row !important;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+
+.fc-toolbar-chunk {
+  &:nth-child(1) {
+    display: none;
+  }
+
+  &:nth-child(3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .fc .fc-toolbar-title {
+    font-size: 20px !important;
+  }
+
+  .fc-prev-button.fc-button.fc-button-primary,
+  .fc-next-button.fc-button.fc-button-primary {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .fc-dayGridMonth-button.fc-button.fc-button-primary.fc-button-active {
+    font-size: 10px;
+  }
+}

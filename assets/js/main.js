@@ -1,6 +1,15 @@
 var media = window.matchMedia("(max-width: 739px)");
 
 $(".left-menu-toggle").click(function () {
+  // setTimeout(function () {
+  //   console.log("CALLED");
+  //   window.resizeTo(
+  //     100,
+  //     100
+  //     // window.screen.availWidth / 2,
+  //     // window.screen.availHeight / 2
+  //   );
+  // }, 500);
   if (media.matches) {
     $(".sidebar").toggleClass("open");
   } else {
