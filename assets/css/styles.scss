@@ -72,6 +72,13 @@
   }
 
   .fc-event-main {
+    .only-amount {
+      font-weight: bold;
+      padding-top: 28px;
+      padding-left: 18px;
+      font-size: 18px;
+    }
+
     .event-box {
       background-color: $color4;
       border-radius: 50px;
@@ -106,6 +113,31 @@
         overflow: hidden;
         text-overflow: ellipsis;
         font-weight: 500;
+      }
+    }
+  }
+
+  .calendar-wrap {
+    position: relative;
+
+    .selects {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+
+      @media screen and (min-width: 992px) {
+        position: absolute;
+        top: 2px;
+        right: 0;
+      }
+
+      select {
+        padding: 0 10px;
+        height: 30px;
+        border: 1px solid #000;
+        color: #000;
+        border-radius: 50px;
       }
     }
   }

@@ -386,12 +386,26 @@ hr {
   opacity: 0.5;
 }
 
+.fc tbody tr[role="row"]:last-child {
+  display: none;
+}
+
 .fc-header-toolbar.fc-toolbar.fc-toolbar-ltr {
   // justify-content: center;
 }
 
-.fc .fc-day-other .fc-daygrid-day-top {
+.fc .fc-day-other {
   opacity: 0 !important;
+}
+
+.fc-daygrid-day {
+  &.disable > * {
+    background-image: url("../imgs/stripe_719859e18669b76b33d4b8c37dd103f6.png");
+
+    .fc-daygrid-day-number {
+      text-decoration: line-through;
+    }
+  }
 }
 
 .fc-daygrid-day-top {

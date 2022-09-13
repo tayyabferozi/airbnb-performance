@@ -60,24 +60,61 @@ function renderCalendar() {
         end: "2022-08-28",
         future: true,
       },
+      {
+        img: "dummy-user.png",
+        name: "Albert",
+        amount: "435",
+        start: "2022-08-29",
+        onlyAmount: true,
+      },
+      {
+        img: "dummy-user.png",
+        name: "Albert",
+        amount: "437",
+        start: "2022-08-30",
+        onlyAmount: true,
+      },
+      {
+        img: "dummy-user.png",
+        name: "Albert",
+        amount: "478",
+        start: "2022-08-31",
+        onlyAmount: true,
+      },
     ],
     eventContent: function (arg, createElement) {
-      const { img, name, amount, future } = arg.event.extendedProps;
+      const { img, name, amount, future, onlyAmount } = arg.event.extendedProps;
 
       var innerText;
 
-      innerText = `
-            <div class='event-box ${future ? "future" : ""}'>
-            <img src='./assets/imgs/${img}' alt='user' />
-              <div class='text'>${name} · $${amount} · Past guest</div>
-            </div>
-            `;
+      if (!onlyAmount) {
+        innerText = `
+        <div class='event-box ${future ? "future" : ""}'>
+          <img src='./assets/imgs/${img}' alt='user' />
+          <div class='text'>${name} · $${amount} · Past guest</div>
+        </div>
+        `;
+      } else {
+        innerText = `<div class='only-amount'>$${amount}</div>`;
+      }
 
       return { html: innerText };
     },
   });
 
   cal.render();
+
+  const tds = document.querySelectorAll(".fc-daygrid-day.fc-day.fc-day-past");
+
+  tds.forEach((td) => {
+    const el = td.querySelector(".fc-daygrid-day-events");
+
+    if (el.clientHeight < 35) {
+      td.classList.add("disable");
+    }
+  });
+
+  document.querySelector(".fc-toolbar-title").innerHTML = "July 2022";
 }
 
 document.addEventListener("DOMContentLoaded", renderCalendar);

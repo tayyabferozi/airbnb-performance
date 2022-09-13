@@ -440,8 +440,20 @@ hr {
   opacity: 0.5;
 }
 
-.fc .fc-day-other .fc-daygrid-day-top {
+.fc tbody tr[role="row"]:last-child {
+  display: none;
+}
+
+.fc .fc-day-other {
   opacity: 0 !important;
+}
+
+.fc-daygrid-day.disable > * {
+  background-image: url("../imgs/stripe_719859e18669b76b33d4b8c37dd103f6.png");
+}
+
+.fc-daygrid-day.disable > * .fc-daygrid-day-number {
+  text-decoration: line-through;
 }
 
 .fc-daygrid-day-top {
@@ -549,6 +561,13 @@ hr {
   color: #fff;
 }
 
+.schedular .fc-event-main .only-amount {
+  font-weight: bold;
+  padding-top: 28px;
+  padding-left: 18px;
+  font-size: 18px;
+}
+
 .schedular .fc-event-main .event-box {
   background-color: #f7f7f7;
   border-radius: 50px;
@@ -590,5 +609,35 @@ hr {
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 500;
+}
+
+.schedular .calendar-wrap {
+  position: relative;
+}
+
+.schedular .calendar-wrap .selects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 992px) {
+  .schedular .calendar-wrap .selects {
+    position: absolute;
+    top: 2px;
+    right: 0;
+  }
+}
+
+.schedular .calendar-wrap .selects select {
+  padding: 0 10px;
+  height: 30px;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 50px;
 }
 /*# sourceMappingURL=styles.css.map */
