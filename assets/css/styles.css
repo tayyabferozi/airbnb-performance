@@ -399,6 +399,26 @@ button {
   width: 16px;
 }
 
+#performance-layout #main-content .right-content .body {
+  padding-top: 64px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media screen and (max-width: 1439px) {
+  #performance-layout #main-content .right-content .body {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 739px) {
+  #performance-layout #main-content .right-content .body {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 .custom-form-control label {
   display: block;
   font-weight: bold;
@@ -421,26 +441,9 @@ hr {
 }
 
 .performance .stats {
-  padding-top: 64px;
-  padding-left: 80px;
-  padding-right: 80px;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media screen and (max-width: 1439px) {
-  .performance .stats {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media screen and (max-width: 739px) {
-  .performance .stats {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
 }
 
 .performance .stats .stats-main {
@@ -505,5 +508,36 @@ hr {
 
 .performance .stats .stats-main .chart-legend .item .box-wrap .box.grey {
   background-color: #b0b0b0;
+}
+
+.schedular .fc-icon {
+  color: #fff;
+}
+
+.schedular .fc-event-main .event-box {
+  background-color: #f7f7f7;
+  border-radius: 50px;
+  padding: 10px;
+  border: 1px solid #e4e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.schedular .fc-event-main .event-box img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.schedular .fc-event-main .event-box .text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
 }
 /*# sourceMappingURL=styles.css.map */

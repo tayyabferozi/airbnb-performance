@@ -345,6 +345,19 @@ button {
       }
 
       .body {
+        padding-top: 64px;
+        padding-left: 80px;
+        padding-right: 80px;
+
+        @media screen and (max-width: 1439px) {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+
+        @media screen and (max-width: 739px) {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
       }
     }
   }

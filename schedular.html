@@ -11,6 +11,13 @@
       href="./assets/imgs/logo.png"
       type="image/x-icon"
     />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css"
+      integrity="sha512-liDnOrsa/NzR+4VyWQ3fBzsDBzal338A1VfUpQvAcdt+eL88ePCOd3n9VQpdA0Yxi4yglmLy/AmH+Lrzmn0eMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
 
     <!-- BOOTSTRAP -->
 
@@ -20,6 +27,16 @@
     <!-- CUSTOM STYLES -->
 
     <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- FULL CALENDAR -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css"
+      crossorigin="anonymous"
+      referr
+      erpolicy="no-referrer"
+    />
   </head>
   <body id="performance-layout">
     <!-- NAVBAR START -->
@@ -162,8 +179,8 @@
           <div class="links">
             <a href="#0">Today</a>
             <a href="#0">Inbox</a>
-            <a href="#0">Calendar</a>
-            <a class="active" href="#0">Insights</a>
+            <a class="active" href="#0">Calendar</a>
+            <a class="" href="#0">Insights</a>
             <div class="dropdown" href="#0">
               Menu
               <svg
@@ -236,45 +253,14 @@
       <div class="sidebar">
         <img src="./assets/vectors/close.svg" alt="close" class="close" />
         <div class="sidebar-main">
-          <h2 class="heading">Performance</h2>
-
-          <div class="links">
-            <a href="#0"
-              ><img src="./assets/vectors/arrow-right.svg" alt="arrow" />
-              Quality</a
-            >
-            <a href="#0"
-              ><img src="./assets/vectors/arrow-right.svg" alt="arrow" />
-              Occupancy & rates</a
-            >
-            <a href="#0"
-              ><img src="./assets/vectors/arrow-right.svg" alt="arrow" />
-              Conversion</a
-            >
-            <a href="#0" class="active"
-              ><img src="./assets/vectors/arrow-right-white.svg" alt="arrow" />
-              Earnings</a
-            >
-            <a href="#0"
-              ><img
-                src="./assets/vectors/arrow-right.svg"
-                alt="arrow"
-              />Superhost</a
-            >
-            <a href="#0"
-              ><img
-                src="./assets/vectors/arrow-right.svg"
-                alt="arrow"
-              />Cleaning</a
-            >
-          </div>
+          <h2 class="heading">Calendar</h2>
         </div>
       </div>
 
       <!-- SIDEBAR END -->
 
       <!-- MAIN PAGE CONTENT START -->
-      <div class="right-content performance">
+      <div class="right-content schedular">
         <div class="head">
           <button class="menu left-menu-toggle">
             <img
@@ -283,7 +269,7 @@
               class="menu-icon"
             />
           </button>
-          <h1>Earnings</h1>
+          <h1>Calendar</h1>
         </div>
 
         <div class="body stats">
@@ -318,30 +304,8 @@
               </select>
             </div>
 
-            <div class="amount-main">
-              <div class="amount">$3,624.00</div>
-              <div class="sub-text">Booked earnings for 2022</div>
-            </div>
-
-            <div class="chart-legend">
-              <div class="item">
-                <div class="amount">$635.00</div>
-                <div class="box-wrap">
-                  <div class="box dark"></div>
-                  Paid out
-                </div>
-              </div>
-              <div class="item">
-                <div class="amount">$2.989.00</div>
-                <div class="box-wrap">
-                  <div class="box grey"></div>
-                  Expected
-                </div>
-              </div>
-            </div>
-
             <div class="mt-5">
-              <canvas id="chart"></canvas>
+              <div id="calendar"></div>
             </div>
           </div>
         </div>
@@ -354,18 +318,30 @@
 
     <script src="./assets/js/jquery.min.js"></script>
 
-    <!-- CHART.JS -->
+    <!-- CALENDAR -->
 
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
-      integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+      src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.min.css"
+      integrity="sha512-rXkN2PUQUcFEWfSXhdr0je8PHDqhcGHFYEUtRXHMJm//REdK7fEbCUlchurT/Ku9o/Y+bCO3xtnSlhdk0EEm/w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/gcal.min.js"
+      integrity="sha512-X22wrzog4NcL9NM97PKUVhWH4K6MSp9f6iIYHtXkKVwEXZ8GqkWOkLWdBeStyPuuKRkNzkkGVr5v++qMoYM5Fg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
 
     <!-- CUSTOM SCRIPTS -->
 
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/schedular.js"></script>
   </body>
 </html>
