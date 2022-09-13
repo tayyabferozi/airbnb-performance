@@ -57,7 +57,7 @@ function renderCalendar() {
         name: "Albert",
         amount: "1,993.54",
         start: "2022-08-26",
-        end: "2022-08-29",
+        end: "2022-08-28",
         future: true,
       },
     ],
