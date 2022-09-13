@@ -444,6 +444,31 @@ hr {
   display: none;
 }
 
+.fc .fc-scrollgrid {
+  border-top-width: 0 !important;
+}
+
+.fc thead th {
+  border-width: 0;
+  border-bottom-width: 1px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.fc thead th:nth-child(1) {
+  position: relative;
+}
+
+.fc thead th:nth-child(1)::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: -1px;
+  top: 0;
+}
+
 .fc .fc-day-other {
   opacity: 0 !important;
 }
