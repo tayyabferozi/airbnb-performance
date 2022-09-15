@@ -82,6 +82,7 @@ function renderCalendar() {
         onlyAmount: true,
       },
     ],
+    locale: "fr",
     eventContent: function (arg, createElement) {
       const { img, name, amount, future, onlyAmount } = arg.event.extendedProps;
 
